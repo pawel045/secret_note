@@ -1,0 +1,31 @@
+{% include "index.html" %}
+
+
+
+<section id="log-reg" class="w-100 p-4 d-flex justify-content-center pb-4">
+  <form action="/register" method="POST" class="log-reg-form">
+    <h1 class="h3 mb-3 fw-normal log-reg-title">Register</h1>
+    <div class="form-floating log-reg-label">
+      <input name="username" class="form-control" id="floatingInput" placeholder="Login">
+      <label for="floatingInput" class="log-reg-label-color">Login</label>
+    </div>
+    <div class="form-floating log-reg-label">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword" class="log-reg-label-color">Password</label>
+    </div>
+
+      {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <div class="log-reg-button">
+    <button class="w-100 btn btn-lg btn-outline-light" type="submit">Sign in</button>
+    </div>
+  </form>
+
+
+</section>
+
+
+
+

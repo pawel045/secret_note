@@ -1,0 +1,35 @@
+{% include "index.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+<section id="text-area">
+    <div class="textarea-container">
+    <div class="container text-bg-dark">
+    <form class="textarea-components" action="" method="POST">
+
+    {% if show_addressee == 1 %}
+    <div class="mb-3">
+      <label class="form-label">Addressee</label>
+      <input class="form-control" name="addressee" id="exampleFormControlInput1">
+      {% if error: %}
+        <p style="color:red;">{{ error }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input class="form-control" name="title" id="exampleFormControlInput2">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Content</label>
+      <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="8"></textarea>
+    </div>
+    <div>
+        <button class="btn btn-lg btn-outline-light textarea-button" type="submit">Send</button>
+    </div>
+    </form>
+    </div>
+    </div>
+</section>
+</body>

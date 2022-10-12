@@ -1,0 +1,9 @@
+{% include "index.html" %}
+
+<section id="mailbox">
+<ul class="list-group mailbox-group">
+    {% for message in messages %}
+    <a href="/{{ message.url }}" class="list-group-item list-group-item-action list-group-item-dark">title: {{ message.title }} | from: {{ message.recipient }}</a>
+    {% endfor %}
+</ul>
+</section>

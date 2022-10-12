@@ -1,0 +1,112 @@
+* {
+    background-color:#212529;
+    font-family: 'Anonymous Pro';
+}
+
+.form-control {
+    color: white;
+}
+
+/* Navigation bar */
+#title {
+    background-color:#212529;
+    font-family: 'Anonymous Pro';
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 1% 7%;
+}
+
+#title .nav-item {
+    padding: 30px;
+}
+
+/* Text area box */
+#text-area {
+    text-align: center;
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color:#212529;
+}
+
+.textarea-container {
+    padding: 1% 30%;
+}
+
+@media (max-width: 800px) {
+.textarea-container {
+    padding: 12% 10%;
+}
+}
+
+.textarea-components {
+    padding: 3%;
+}
+
+.textarea-button {
+    width: 40%;
+}
+
+/* Login/registration area */
+#log-reg {
+    background-color:#212529;
+    text-align: center;
+}
+
+.log-reg-title {
+    font-family: 'Anonymous Pro';
+    color: white;
+    font-weight: 400;
+}
+
+.log-reg-cont {
+    text-align: center;
+}
+
+.log-reg-form {
+    width: 22rem;
+}
+
+.log-reg-button {
+    padding: 3% 15%;
+}
+
+.log-reg-label {
+    margin: 5%;
+}
+
+.log-reg-label-color {
+    background-color: transparent;
+}
+
+/* Note style */
+#note {
+    text-align: center;
+    color: white;
+    padding: 8%;
+}
+
+.info-text {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.fa-brands{
+    color: white;
+    padding: 3%;
+}
+
+/* mailbox */
+#mailbox {
+    text-align: center;
+}
+
+.mailbox-group {
+    padding-top: 5%;
+    position: relative;
+    left: 30%;
+    width: 40%;
+}

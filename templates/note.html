@@ -1,0 +1,12 @@
+{% include "index.html" %}
+<body>
+        <section id="note" class="align-middle">
+                {% if data %}
+                <h3>{{ data[0] }}</h3>
+                <p class="message-text">{{ data[1] }}</p>
+
+                {% else %}
+                <h3>No notes here :(</h3>
+                {% endif %}
+        </section>
+</body>

@@ -1,0 +1,14 @@
+{% include "index.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<body>
+    <section id="note">
+        {% if correctly_shipped == 1 %}
+            <p>Message has been sent correctly</p>
+        {% elif correctly_shipped == -1 %}
+            <p>Adressee doesn't exist. Message has been sent correctly</p>
+        {% else %}
+            <div> {{ path }} </div>
+        {% endif %}
+    </section>
+</body>
