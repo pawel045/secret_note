@@ -6,6 +6,7 @@ from forms import NoteForm, CopyForm, LoginForm, RegisterForm
 from werkzeug.security import generate_password_hash, check_password_hash
 import secrets
 import config
+import os
 
 # ===== Flask application, connect with database, login manager =====
 app = Flask(__name__)
@@ -15,6 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///SNdb.sqlite3'
 db = SQLAlchemy(app)
 
 # ===== Login set up =====
+
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(100))
