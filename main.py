@@ -44,14 +44,14 @@ class Notes(db.Model):
     user_id = db.Column(db.ForeignKey('users.id'))
 
 
-db.create_all()
+# db.create_all()
 #
 # new_user = Users(
 #     login='pawel',
 #     password='pawel',
 # )
 # db.session.add(new_user)
-db.session.commit()
+# db.session.commit()
 
 
 # ===== MAIN PAGE - SEND A MESSAGE =====
