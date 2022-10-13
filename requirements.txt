@@ -13,7 +13,6 @@ Jinja2==3.1.2
 MarkupSafe==2.1.1
 platformdirs==2.5.2
 psutil==5.8.0
-PyGObject==3.38.0
 pyperclip==1.8.2
 SQLAlchemy==1.4.41
 virtualenv==20.16.5
