@@ -11,7 +11,7 @@ import os
 # ===== Flask application, connect with database, login manager =====
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')  # local -> config.DB_SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') # local -> 'sqlite:///SNdb.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL1') # local -> 'sqlite:///SNdb.sqlite3'
 Bootstrap(app)
 
 db = SQLAlchemy(app)
