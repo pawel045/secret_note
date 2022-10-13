@@ -10,9 +10,10 @@ import os
 
 # ===== Flask application, connect with database, login manager =====
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config.DB_SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABAE_URL') # local -> 'sqlite:///SNdb.sqlite3'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')# local -> config.DB_SECRET_KEY
 Bootstrap(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///SNdb.sqlite3'
+
 db = SQLAlchemy(app)
 
 # ===== Login set up =====
