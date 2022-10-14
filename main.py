@@ -10,12 +10,14 @@ import os
 
 # ===== Flask application, connect with database, login manager =====
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')  # local -> config.DB_SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL1') # local -> 'sqlite:///SNdb.sqlite3'
+app.config['SECRET_KEY'] = 'yXjf_b2ADGJsvjx0N5gBFg' #os.environ.get('SECRET_KEY')  # local -> config.DB_SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://tkhtgnpabhlyqf:29bb32d033b3d37561045c19e20e3c75637f4bdf12a153ad99c31482783bff08@ec2-54-194-211-183.eu-west-1.compute.amazonaws.com:5432/d8ai634qa9gi31'#os.environ.get('DATABASE_URL1') # local -> 'sqlite:///SNdb.sqlite3'
 Bootstrap(app)
 
 db = SQLAlchemy(app)
 
+print(os.environ.get('SECRET_KEY'))
+print(os.environ.get('DATABASE_URL1'))
 
 # ===== Login set up =====
 class Users(db.Model, UserMixin):
