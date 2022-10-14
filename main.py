@@ -49,7 +49,7 @@ class Notes(db.Model):
     recipient = db.Column(db.String(100))
     user_id = db.Column(db.ForeignKey('users.id'))
 
-# db.create_all()
+db.create_all()
 #
 # new_user = Users(
 #     login='pawel',
