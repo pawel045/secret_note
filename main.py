@@ -26,8 +26,8 @@ db = SQLAlchemy(app)
 # ===== Login set up =====
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    login = db.Column(db.String(100))
-    password = db.Column(db.String(100))
+    login = db.Column(db.String(300))
+    password = db.Column(db.String(300))
     notes = db.relationship('Notes', backref='users')
 
 
@@ -43,10 +43,10 @@ def load_user(user_id):
 # ====== SQLAlchemy class model =====
 class Notes(db.Model):
     id = db.Column('note_id', db.Integer, primary_key=True)
-    title = db.Column(db.String(30))
-    content = db.Column(db.String(300))
-    url = db.Column(db.String(10))
-    recipient = db.Column(db.String(30))
+    title = db.Column(db.String(100))
+    content = db.Column(db.String(1000))
+    url = db.Column(db.String(100))
+    recipient = db.Column(db.String(100))
     user_id = db.Column(db.ForeignKey('users.id'))
 
 # db.create_all()
