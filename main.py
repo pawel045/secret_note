@@ -45,7 +45,7 @@ class Notes(db.Model):
     id = db.Column('note_id', db.Integer, primary_key=True)
     title = db.Column(db.String(30))
     content = db.Column(db.String(300))
-    url = db.Column(db.String(100))
+    url = db.Column(db.String(10))
     recipient = db.Column(db.String(30))
     user_id = db.Column(db.ForeignKey('users.id'))
 
