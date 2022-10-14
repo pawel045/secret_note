@@ -53,7 +53,7 @@ db.create_all()
 #     password='pawel',
 # )
 # db.session.add(new_user)
-# db.session.commit()
+db.session.commit()
 
 
 # ===== MAIN PAGE - SEND A MESSAGE =====
