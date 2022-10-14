@@ -13,14 +13,15 @@ app = Flask(__name__)
 uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
-# rest of connection code using the connection string `uri`
-print(uri)
+
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')  # local -> config.DB_SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_ECHO'] = True
 Bootstrap(app)
 
 db = SQLAlchemy(app)
+
 
 # ===== Login set up =====
 class Users(db.Model, UserMixin):
@@ -44,10 +45,9 @@ class Notes(db.Model):
     id = db.Column('note_id', db.Integer, primary_key=True)
     title = db.Column(db.String(30))
     content = db.Column(db.String(300))
-    url = db.Column(db.String(6))
+    url = db.Column(db.String(100))
     recipient = db.Column(db.String(30))
     user_id = db.Column(db.ForeignKey('users.id'))
-
 
 # db.create_all()
 #
