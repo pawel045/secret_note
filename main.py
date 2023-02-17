@@ -10,12 +10,12 @@ import os
 
 # ===== Flask application, connect with database, login manager =====
 app = Flask(__name__)
-uri = os.getenv("DATABASE_URL")
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
+# uri = os.getenv("DATABASE_URL")
+# if uri.startswith("postgres://"):
+#     uri = uri.replace("postgres://", "postgresql://", 1)
 
-app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')  # local -> config.DB_SECRET_KEY
-app.config['SQLALCHEMY_DATABASE_URI'] = uri
+app.config['SECRET_KEY'] = config.__DB_SECRET_KEY
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 Bootstrap(app)
