@@ -11,3 +11,7 @@ A communicator for sending messages via url. Messages can be displayed only once
 3. Run app.
 
 4. Open in your browser and type http://127.0.0.1:5000/ Enjoy :)
+
+## 📹 How it works
+
+![Demo of the project](trailer.gif)
